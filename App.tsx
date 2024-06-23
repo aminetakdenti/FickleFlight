@@ -8,6 +8,7 @@
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -36,6 +37,7 @@ function Section({children, title}: SectionProps): React.JSX.Element {
       <Text
         style={[
           styles.sectionTitle,
+
           {
             color: isDarkMode ? Colors.white : Colors.black,
           },
@@ -76,6 +78,10 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Button
+            title="Click me"
+            onPress={() => console.log('Button clicked')}
+          />
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
