@@ -1,6 +1,13 @@
 import React from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
+
+import {ExploreIcon} from '../components/icons/Explore';
 
 export function HomeScreen() {
-  return <Text>HomeScreen</Text>;
+  return (
+    <View>
+      <ExploreIcon />
+      <Text>HomeScreen</Text>
+    </View>
+  );
 }
