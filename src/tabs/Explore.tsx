@@ -4,7 +4,7 @@ import {StyleSheet, View} from 'react-native';
 import {Main} from '../components/Main';
 import {greyLight} from '../constant';
 
-export function HomeScreen() {
+export function ExploreScreen() {
   return (
     <View style={styles.container}>
       <Main />

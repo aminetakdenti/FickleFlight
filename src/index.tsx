@@ -5,7 +5,7 @@ import * as React from 'react';
 import {Header} from './components';
 import {AccountIcon} from './components/icons/Account';
 import {ExploreIcon} from './components/icons/Explore';
-import {AccountScreen, HomeScreen} from './tabs';
+import {ExploreScreen, ProfileScreen} from './tabs';
 
 const Tab = createBottomTabNavigator();
 
@@ -22,8 +22,8 @@ export default function Layout() {
           },
         }}>
         <Tab.Screen
-          name="Home"
-          component={HomeScreen}
+          name="Explore"
+          component={ExploreScreen}
           options={{
             // eslint-disable-next-line react/no-unstable-nested-components
             tabBarIcon: ({focused}) => <ExploreIcon isFocused={focused} />,
@@ -37,8 +37,8 @@ export default function Layout() {
           }}
         />
         <Tab.Screen
-          name="Settings"
-          component={AccountScreen}
+          name="Profile"
+          component={ProfileScreen}
           options={{
             headerShown: false,
             // eslint-disable-next-line react/no-unstable-nested-components

@@ -11,7 +11,7 @@ import {StatusBar, StyleSheet, Text, View} from 'react-native';
 
 // import {Text} from '../components/ui';
 
-export function AccountScreen() {
+export function ProfileScreen() {
   return (
     <View style={styles.container}>
       <StatusBar />

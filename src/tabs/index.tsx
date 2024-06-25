@@ -1,2 +1,2 @@
-export * from './Home';
-export * from './Account';
+export * from './Explore';
+export * from './Profile';
