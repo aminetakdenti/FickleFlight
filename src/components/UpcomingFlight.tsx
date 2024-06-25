@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import {black, darkBlue, grey, lightGrey, white} from '../constant';
 import {FlightIcon, OvalIcon} from './icons';
@@ -63,6 +63,18 @@ const styles = StyleSheet.create({
     backgroundColor: white,
     borderRadius: 8,
     gap: 16,
+    //shadow
+    ...Platform.select({
+      ios: {
+        shadowColor: '#000',
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.03,
+        shadowRadius: 15,
+      },
+      android: {
+        elevation: 2,
+      },
+    }),
   },
   cardHeader: {
     flexDirection: 'row',
@@ -70,6 +82,7 @@ const styles = StyleSheet.create({
   },
   cardHeaderTextContainer: {
     gap: 4,
+    flex: 1,
   },
   cardHeaderTextContainerRight: {
     alignItems: 'flex-end',
@@ -88,9 +101,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     position: 'relative',
+    overflow: 'hidden',
   },
   line: {
-    width: '100%',
+    width: 115,
     height: 1,
     borderStyle: 'dashed',
     borderWidth: 1,
@@ -99,7 +113,7 @@ const styles = StyleSheet.create({
   flight: {
     position: 'absolute',
     left: '50%',
-    transform: [{translateX: -16}],
+    transform: [{translateX: -25}],
   },
   hr: {
     width: '100%',
