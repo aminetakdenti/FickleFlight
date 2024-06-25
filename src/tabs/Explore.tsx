@@ -1,13 +1,14 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-import {Main} from '../components/Main';
-import {greyLight} from '../constant';
+import {Main, UpcomingFlight} from '../components';
+import {white2} from '../constant';
 
 export function ExploreScreen() {
   return (
     <View style={styles.container}>
       <Main />
+      <UpcomingFlight />
     </View>
   );
 }
@@ -15,10 +16,9 @@ export function ExploreScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: greyLight,
+    backgroundColor: white2,
     paddingHorizontal: 16,
     paddingVertical: 20,
+    gap: 20,
   },
 });

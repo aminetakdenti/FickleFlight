@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import {white} from '../constant';
-import {Heart} from './icons/Heart';
+import {HeartIcon} from './icons';
 
 export const Main = () => {
   return (
@@ -21,7 +21,7 @@ export const Main = () => {
           <View style={styles.innerImage}>
             <View style={styles.heartContainer}>
               <TouchableOpacity>
-                <Heart />
+                <HeartIcon />
               </TouchableOpacity>
             </View>
             <View style={styles.imageItem}>

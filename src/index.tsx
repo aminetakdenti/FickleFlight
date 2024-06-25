@@ -3,8 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import * as React from 'react';
 
 import {Header} from './components';
-import {AccountIcon} from './components/icons/Account';
-import {ExploreIcon} from './components/icons/Explore';
+import {AccountIcon, ExploreIcon} from './components/icons';
 import {ExploreScreen, ProfileScreen} from './tabs';
 
 const Tab = createBottomTabNavigator();
