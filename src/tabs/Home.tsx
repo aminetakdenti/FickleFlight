@@ -1,13 +1,24 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 
-import {ExploreIcon} from '../components/icons/Explore';
+import {Main} from '../components/Main';
+import {greyLight} from '../constant';
 
 export function HomeScreen() {
   return (
-    <View>
-      <ExploreIcon />
-      <Text>HomeScreen</Text>
+    <View style={styles.container}>
+      <Main />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: greyLight,
+    paddingHorizontal: 16,
+    paddingVertical: 20,
+  },
+});
