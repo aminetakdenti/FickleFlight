@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
+  Alert,
   ImageBackground,
   StyleSheet,
   Text,
@@ -8,9 +9,28 @@ import {
 } from 'react-native';
 
 import {HeartIcon} from '../../components/icons';
-import {white} from '../../constant';
+import {red, white} from '../../constant';
 
 export const Main = () => {
+  const [favorite, setFavorite] = useState(false);
+
+  function handlePress() {
+    setFavorite(true);
+    return new Promise(resolve => {
+      resolve(
+        setTimeout(() => {
+          if (favorite) {
+            return Alert.alert(
+              'This Place Already added to your favorite list!',
+            );
+          }
+          setFavorite(true);
+          Alert.alert("You add this place to you'r favorites!");
+        }, 2000),
+      );
+    });
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.hero}>
@@ -20,8 +40,8 @@ export const Main = () => {
           style={styles.image}>
           <View style={styles.innerImage}>
             <View style={styles.heartContainer}>
-              <TouchableOpacity>
-                <HeartIcon />
+              <TouchableOpacity onPress={handlePress}>
+                <HeartIcon fill={favorite ? red : undefined} />
               </TouchableOpacity>
             </View>
             <View style={styles.imageItem}>
