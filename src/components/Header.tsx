@@ -1,15 +1,21 @@
+import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, TouchableOpacity, View} from 'react-native';
 
 import Logo from '../assets/icons/logo.svg';
 import MenuIcon from '../assets/icons/menu-icon.svg';
 import {white} from '../constant';
+import {Profile} from './Profile';
 
 export const Header = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.header}>
       <MenuIcon />
       <Logo />
+      <TouchableOpacity onPress={() => navigation.navigate('Profile' as never)}>
+        <Profile />
+      </TouchableOpacity>
     </View>
   );
 };
