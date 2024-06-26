@@ -2,8 +2,8 @@
 import React from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import {black, darkBlue, grey, lightGrey, white} from '../constant';
-import {FlightIcon, OvalIcon} from './icons';
+import {FlightIcon, OvalIcon} from '../../components/icons';
+import {black, darkBlue, grey, lightGrey, white} from '../../constant';
 
 export const UpcomingFlight = () => {
   return (

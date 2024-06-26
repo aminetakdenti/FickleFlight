@@ -1,8 +1,8 @@
 import React from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 
-import {black, darkBlue, white2} from '../constant';
-import {DestinationCard} from './DestinationCard';
+import {DestinationCard} from '../../components';
+import {black, darkBlue, white2} from '../../constant';
 
 export const TrendingDestinations = () => {
   return (

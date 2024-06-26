@@ -7,15 +7,15 @@ import {
   View,
 } from 'react-native';
 
-import {white} from '../constant';
-import {HeartIcon} from './icons';
+import {HeartIcon} from '../../components/icons';
+import {white} from '../../constant';
 
 export const Main = () => {
   return (
     <View style={styles.container}>
       <View style={styles.hero}>
         <ImageBackground
-          source={require('../assets/images/paris.jpg')}
+          source={require('../../assets/images/paris.jpg')}
           resizeMethod="scale"
           style={styles.image}>
           <View style={styles.innerImage}>
