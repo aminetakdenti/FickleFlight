@@ -30,8 +30,8 @@ export const UpcomingFlight = () => {
               styles.cardHeaderTextContainer,
               styles.cardHeaderTextContainerRight,
             ]}>
-            <Text style={styles.cardHeaderTextContainerHeader}>SIN</Text>
-            <Text style={styles.cardHeaderTextContainerText}>singapore</Text>
+            <Text style={styles.cardHeaderTextContainerHeader}>LAX</Text>
+            <Text style={styles.cardHeaderTextContainerText}>Los Angeles</Text>
           </View>
         </View>
 
