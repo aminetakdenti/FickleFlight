@@ -1,8 +1,8 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
 
-import {Main, TrendingDestinations, UpcomingFlight} from '../components';
-import {white2} from '../constant';
+import {Main, TrendingDestinations, UpcomingFlight} from '../../components';
+import {white2} from '../../constant';
 
 export function ExploreScreen() {
   return (
