@@ -8,7 +8,6 @@ type Props = SvgProps & {
 };
 
 export const ExploreIcon = (props: Props) => {
-  console.log(props.isFocused);
   return (
     <Svg width={25} height={25} viewBox="0 0 25 25" fill="none" {...props}>
       <G opacity={0.8}>

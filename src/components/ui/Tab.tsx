@@ -23,7 +23,6 @@ export const Tab = ({
   label,
   icon,
 }: TabProps) => {
-  console.log(isFocused);
   return (
     <TouchableOpacity
       accessibilityRole="button"
